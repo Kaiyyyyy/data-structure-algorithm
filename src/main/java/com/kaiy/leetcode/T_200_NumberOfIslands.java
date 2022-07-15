@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * 200. 岛屿数量
- *
- * <a href="https://leetcode.cn/problems/number-of-islands/">...</a>
+ * <p/>
+ * <a href="https://leetcode.cn/problems/number-of-islands/">200. 岛屿数量</a>
  */
 public class T_200_NumberOfIslands {
 
