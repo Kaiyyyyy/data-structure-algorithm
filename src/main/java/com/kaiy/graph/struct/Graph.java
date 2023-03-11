@@ -55,10 +55,14 @@ public class Graph {
         return graph;
     }
 
+    /**
+     * deep clone
+     */
+    @Override
     public Graph clone() {
         Graph graph = new Graph();
         vertexMap.forEach((k, v) -> graph.addVertex(new Vertex(v.getId())));
-        edgeMap.forEach((k, v) -> graph.addEdge(new Edge(v.getFrom(), v.getTo(), v.getW())));
+        edgeMap.forEach((k, v) -> graph.addEdge(new Edge(v.getFrom(), v.getTo(), v.getW(), v.getC())));
         return graph;
     }
 }

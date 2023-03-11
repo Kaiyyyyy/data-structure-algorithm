@@ -2,6 +2,9 @@ package com.kaiy.graph.struct;
 
 public class Vertex {
 
+    /**
+     * vertex id
+     */
     private String id;
 
     public String getId() {

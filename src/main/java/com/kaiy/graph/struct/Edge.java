@@ -2,18 +2,51 @@ package com.kaiy.graph.struct;
 
 public class Edge {
 
+    /**
+     * edge id
+     */
     private String id;
 
+    /**
+     * from
+     */
     private String from;
 
+    /**
+     * to
+     */
     private String to;
 
+    /**
+     * weight
+     */
     private Integer w;
 
+    /**
+     * cost
+     */
+    private Integer c;
+
+    /**
+     * is reverse edge
+     */
     private boolean reverse = false;
 
     public Edge(String from, String to, Integer w) {
         this(from, to, w, false);
+    }
+
+    public Edge(String from, String to, Integer w, Integer c) {
+        this(from, to, w, c, false);
+    }
+
+    public Edge(String from, String to, Integer w, Integer c, boolean reverse) {
+        this.id = buildEdgeId(from, to);
+        this.from = from;
+        this.to = to;
+        this.w = w;
+        this.c = c;
+        this.reverse = reverse;
     }
 
     public Edge(String from, String to, Integer w, boolean reverse) {
@@ -56,6 +89,14 @@ public class Edge {
         this.w = w;
     }
 
+    public Integer getC() {
+        return c;
+    }
+
+    public void setC(Integer c) {
+        this.c = c;
+    }
+
     public boolean isReverse() {
         return reverse;
     }
@@ -63,7 +104,6 @@ public class Edge {
     public void setReverse(boolean reverse) {
         this.reverse = reverse;
     }
-
 
     public static String buildEdgeId(String from, String to) {
         return from + "->" + to;
