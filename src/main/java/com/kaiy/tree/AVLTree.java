@@ -26,10 +26,6 @@ public class AVLTree<E> {
         tree.remove(6);
 
         tree.inorderTraverse();
-
-        Thread thread = Thread.currentThread();
-        ThreadLocal<String> stringThreadLocal = new ThreadLocal<>();
-
     }
 
     private Tree<E> root;
@@ -250,6 +246,4 @@ public class AVLTree<E> {
         inorderTraverse(node.right);
 
     }
-
-
 }
