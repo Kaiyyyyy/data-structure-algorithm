@@ -6,6 +6,9 @@ import com.kaiy.graph.struct.Vertex;
 
 import java.util.*;
 
+/**
+ * max flow
+ */
 public class EdmondKarp {
 
     private static final Integer MAX = (Integer.MAX_VALUE >> 1) - 1;
@@ -109,11 +112,6 @@ public class EdmondKarp {
         System.out.println("paths = " + paths);
     }
 
-    record Flow(Integer maxFlow, List<String> path) {
-    }
-
-
-
     public static void main(String[] args) {
         Vertex s = new Vertex("s");
         Vertex vertex2 = new Vertex("2");
@@ -144,5 +142,8 @@ public class EdmondKarp {
 
         EdmondKarp edmondKarp = new EdmondKarp(graph, s, t);
         edmondKarp.maxFlow();
+    }
+
+    record Flow(Integer maxFlow, List<String> path) {
     }
 }
