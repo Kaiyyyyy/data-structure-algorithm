@@ -7,8 +7,10 @@ import com.kaiy.graph.struct.Vertex;
 
 import java.util.*;
 
+/**
+ * Shortest Path
+ */
 public class Dijkstra {
-
 
     public void search(Graph graph, Vertex s, Vertex t) {
         Map<Vertex, Integer> dist = new HashMap<>();
@@ -99,6 +101,4 @@ public class Dijkstra {
 
     record SearchVertex(Vertex vertex, int dist) {
     }
-
-
 }
