@@ -6,6 +6,9 @@ import com.kaiy.graph.struct.Vertex;
 
 import java.util.*;
 
+/**
+ * Shortest Path Faster Algorithm
+ */
 public class SPFA {
 
     private static final Integer MAX = (Integer.MAX_VALUE >> 1) - 1;
@@ -74,7 +77,6 @@ public class SPFA {
         System.out.println("short path value = " + dist.get(sink));
         System.out.println("short path = " + path);
     }
-
 
     public static void main(String[] args) {
         Vertex s = new Vertex("s");
