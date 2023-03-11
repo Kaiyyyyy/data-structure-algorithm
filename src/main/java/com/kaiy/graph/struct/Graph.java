@@ -54,4 +54,11 @@ public class Graph {
         edges.forEach(graph::addEdge);
         return graph;
     }
+
+    public Graph clone() {
+        Graph graph = new Graph();
+        vertexMap.forEach((k, v) -> graph.addVertex(new Vertex(v.getId())));
+        edgeMap.forEach((k, v) -> graph.addEdge(new Edge(v.getFrom(), v.getTo(), v.getW())));
+        return graph;
+    }
 }
