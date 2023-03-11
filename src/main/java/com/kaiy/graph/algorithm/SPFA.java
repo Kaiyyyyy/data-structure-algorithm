@@ -58,14 +58,14 @@ public class SPFA {
             return;
         }
         LinkedList<String> path = new LinkedList<>();
-        path.addLast(sink.getId());
+        path.addFirst(sink.getId());
         Vertex pre = sink;
         while (true) {
             Vertex vertex = parent.get(pre);
             if (vertex == null) {
                 break;
             }
-            path.addLast(vertex.getId());
+            path.addFirst(vertex.getId());
             if (vertex == source) {
                 break;
             }
